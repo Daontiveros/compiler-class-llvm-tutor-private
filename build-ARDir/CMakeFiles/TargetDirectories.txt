@@ -1,0 +1,8 @@
+/home/diana/llvm-tutor/build-ARDir/CMakeFiles/intrinsics_gen.dir
+/home/diana/llvm-tutor/build-ARDir/CMakeFiles/vt_gen.dir
+/home/diana/llvm-tutor/build-ARDir/CMakeFiles/omp_gen.dir
+/home/diana/llvm-tutor/build-ARDir/CMakeFiles/acc_gen.dir
+/home/diana/llvm-tutor/build-ARDir/CMakeFiles/target_parser_gen.dir
+/home/diana/llvm-tutor/build-ARDir/CMakeFiles/AffineRecurrence.dir
+/home/diana/llvm-tutor/build-ARDir/CMakeFiles/edit_cache.dir
+/home/diana/llvm-tutor/build-ARDir/CMakeFiles/rebuild_cache.dir

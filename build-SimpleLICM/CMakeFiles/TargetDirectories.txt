@@ -1,0 +1,8 @@
+/home/diana/llvm-tutor/build-SimpleLICM/CMakeFiles/intrinsics_gen.dir
+/home/diana/llvm-tutor/build-SimpleLICM/CMakeFiles/vt_gen.dir
+/home/diana/llvm-tutor/build-SimpleLICM/CMakeFiles/omp_gen.dir
+/home/diana/llvm-tutor/build-SimpleLICM/CMakeFiles/acc_gen.dir
+/home/diana/llvm-tutor/build-SimpleLICM/CMakeFiles/target_parser_gen.dir
+/home/diana/llvm-tutor/build-SimpleLICM/CMakeFiles/SimpleLICM.dir
+/home/diana/llvm-tutor/build-SimpleLICM/CMakeFiles/edit_cache.dir
+/home/diana/llvm-tutor/build-SimpleLICM/CMakeFiles/rebuild_cache.dir

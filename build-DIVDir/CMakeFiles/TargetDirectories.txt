@@ -1,0 +1,8 @@
+/home/diana/llvm-tutor/build-DIVDir/CMakeFiles/intrinsics_gen.dir
+/home/diana/llvm-tutor/build-DIVDir/CMakeFiles/vt_gen.dir
+/home/diana/llvm-tutor/build-DIVDir/CMakeFiles/omp_gen.dir
+/home/diana/llvm-tutor/build-DIVDir/CMakeFiles/acc_gen.dir
+/home/diana/llvm-tutor/build-DIVDir/CMakeFiles/target_parser_gen.dir
+/home/diana/llvm-tutor/build-DIVDir/CMakeFiles/DerivedInductionVar.dir
+/home/diana/llvm-tutor/build-DIVDir/CMakeFiles/edit_cache.dir
+/home/diana/llvm-tutor/build-DIVDir/CMakeFiles/rebuild_cache.dir

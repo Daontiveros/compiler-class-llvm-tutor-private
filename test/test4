@@ -1,0 +1,30 @@
+define i32 @sum_nested(i32 %n) {
+entry:
+  %sum = alloca i32, align 4
+  store i32 0, i32* %sum, align 4
+  br label %outer_loop
+
+outer_loop:                                     ; preds = %outer_loop, %entry
+  %i = phi i32 [0, %entry], [%inc_i, %outer_loop]
+  br label %inner_loop
+
+inner_loop:                                     ; preds = %inner_loop, %outer_loop
+  %j = phi i32 [0, %outer_loop], [%inc_j, %inner_loop]
+  %oldsum = load i32, i32* %sum, align 4
+  %add = add nsw i32 %oldsum, %i
+  %add2 = add nsw i32 %add, %j
+  store i32 %add2, i32* %sum, align 4
+
+  %inc_j = add nsw i32 %j, 2
+  %cmp_j = icmp slt i32 %inc_j, %n
+  br i1 %cmp_j, label %inner_loop, label %outer_loop_inc
+
+outer_loop_inc:                                 ; preds = %inner_loop
+  %inc_i = add nsw i32 %i, 1
+  %cmp_i = icmp slt i32 %inc_i, %n
+  br i1 %cmp_i, label %outer_loop, label %exit
+
+exit:                                           ; preds = %outer_loop_inc
+  %finalsum = load i32, i32* %sum, align 4
+  ret i32 %finalsum
+}
