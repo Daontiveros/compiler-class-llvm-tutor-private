@@ -17,6 +17,8 @@ Go  to directory called build-SimpleLICM
 
 Do the following commands:
 
+```rm -rf *```
+
 ```cmake ../SimpleLICM ```
 
 ```make```
@@ -24,6 +26,8 @@ Do the following commands:
 Go to directory called "build-ARDir"
 
 Do the following commands:
+
+```rm -rf *```
 
 ```cmake ../ARDir```
 
@@ -33,6 +37,8 @@ Do the following commands:
 Go  to directory called build-DIVDir
 
 Do the following commands:
+
+```rm -rf *```
 
 ```cmake ../DIVdir ```
 
@@ -46,22 +52,22 @@ Do the following commands:
 
 #### In "build-SimpleLICM" directory run:
 
-```/usr/lib/llvm-21/bin/opt -load-pass-plugin=./libSimpleLICM.so -passes=simple-licm -S ~/llvm-tutor/test/test1.ll -o ~/llvm-tutor/test/test1_opt.l ```
+```/usr/lib/llvm-21/bin/opt -load-pass-plugin=./libSimpleLICM.so -passes=simple-licm -S ~/compiler-class-llvm-tutor-private/test/test1.ll -o ~/compiler-class-llvm-tutor-private/test/test1_opt.l```
 
 #### In "build-ARDir" directory run:
 
-```/usr/lib/llvm-21/bin/opt -load-pass-plugin=./libAffineRecurrence.so -passes=affine-recurrence -S ~/llvm-tutor/test/test2.ll -o ~/llvm-tutor/test/test2_opt.ll```
+```/usr/lib/llvm-21/bin/opt -load-pass-plugin=./libAffineRecurrence.so -passes=affine-recurrence -S ~/compiler-class-llvm-tutor-private/test/test2.ll -o ~/compiler-class-llvm-tutor-private/test/test2_opt.ll```
 
-```/usr/lib/llvm-21/bin/opt -load-pass-plugin=./libAffineRecurrence.so -passes=affine-recurrence -S ~/llvm-tutor/test/test3.ll -o ~/llvm-tutor/test/test3_opt.ll```
+```/usr/lib/llvm-21/bin/opt -load-pass-plugin=./libAffineRecurrence.so -passes=affine-recurrence -S ~/compiler-class-llvm-tutor-private/test/test3.ll -o ~/compiler-class-llvm-tutor-private/test/test3_opt.ll```
 
 
 #### In "build-DIVDir" directory run:
 
-```/usr/lib/llvm-21/bin/opt -load-pass-plugin=./libDerivedInductionVar.so -passes=induction-var-elim -S ~/llvm-tutor/test/test2.ll -o ~/llvm-tutor/test/test2_opt.ll```
+```/usr/lib/llvm-21/bin/opt -load-pass-plugin=./libDerivedInductionVar.so -passes=induction-var-elim -S ~/compiler-class-llvm-tutor-private/test/test2.ll -o ~/compiler-class-llvm-tutor-private/test/test2_opt.ll```
 
-```/usr/lib/llvm-21/bin/opt -load-pass-plugin=./libDerivedInductionVar.so -passes=induction-var-elim -S ~/llvm-tutor/test/test3.ll -o ~/llvm-tutor/test/test3_opt.ll```
+```/usr/lib/llvm-21/bin/opt -load-pass-plugin=./libDerivedInductionVar.so -passes=induction-var-elim -S ~/compiler-class-llvm-tutor-private/test/test3.ll -o ~/compiler-class-llvm-tutor-private/test/test3_opt.ll```
 
-```/usr/lib/llvm-21/bin/opt -load-pass-plugin=./libDerivedInductionVar.so -passes=induction-var-elim -S ~/llvm-tutor/test/test4.ll -o ~/llvm-tutor/test/test4_opt.ll```
+```/usr/lib/llvm-21/bin/opt -load-pass-plugin=./libDerivedInductionVar.so -passes=induction-var-elim -S ~/compiler-class-llvm-tutor-private/test/test4.ll -o ~/compiler-class-llvm-tutor-private/test/test4_opt.ll```
 
 ## Inputs & Outputs:
 
