@@ -455,6 +455,9 @@ exit:                                             ; preds = %outer_loop_inc
 ##### Go to build-MSD
 Do:
 ..
+
+```rm -rf *```
+
 ```
 cmake ../MSD
 ```
@@ -464,41 +467,33 @@ make
 
 ##### Turn the c file examples into IR
 ..
-```
-clang -O0 -Xclang -disable-O0-optnone -S -emit-llvm ~/llvm-tutor/test/demo.c -o ~/llvm-tutor/test/demo.ll
-```
 
 ```
-clang -O0 -Xclang -disable-O0-optnone -S -emit-llvm ~/llvm-tutor/test/demo2.c -o ~/llvm-tutor/test/demo2.ll
-```
+clang -O0 -Xclang -disable-O0-optnone -S -emit-llvm ~/compiler-class-llvm-tutor-private/test/demo.c -o ~/compiler-class-llvm-tutor-private/test/demo.ll
 
-```
-clang -O0 -Xclang -disable-O0-optnone -S -emit-llvm ~/llvm-tutor/test/array_loop1.c -o ~/llvm-tutor/test/array_loop1.ll
-```
+clang -O0 -Xclang -disable-O0-optnone -S -emit-llvm ~/compiler-class-llvm-tutor-private/test/demo2.c -o ~/compiler-class-llvm-tutor-private/test/demo2.ll
 
-```
-clang -O0 -Xclang -disable-O0-optnone -S -emit-llvm ~/llvm-tutor/test/dse_test1.c -o ~/llvm-tutor/test/dse_test1.ll
+clang -O0 -Xclang -disable-O0-optnone -S -emit-llvm ~/compiler-class-llvm-tutor-private/test/array_loop1.c -o ~/compiler-class-llvm-tutor-private/test/array_loop1.ll
+
+clang -O0 -Xclang -disable-O0-optnone -S -emit-llvm ~/compiler-class-llvm-tutor-private/test/dse_test1.c -o ~/compiler-class-llvm-tutor-private/test/dse_test1.ll
 ```
 
 ##### Compile the MSD:
 ...
 
 ```
-/usr/lib/llvm-21/bin/opt   -load-pass-plugin=./libMemorySSADemo.so   -passes=memssa-demo   -S ~/llvm-tutor/test/demo.ll   -o ~/llvm-tutor/test/demo_opt.ll 
-```
+/usr/lib/llvm-21/bin/opt -load-pass-plugin=./libMemorySSADemo.so -passes=memssa-demo -S ~/compiler-class-llvm-tutor-private/test/demo.ll -o ~/compiler-class-llvm-tutor-private/test/demo_opt.ll
 
-```
-/usr/lib/llvm-21/bin/opt   -load-pass-plugin=./libMemorySSADemo.so   -passes=memssa-demo   -S ~/llvm-tutor/test/demo2.ll   -o ~/llvm-tutor/test/demo2_opt.ll 
-```
+/usr/lib/llvm-21/bin/opt -load-pass-plugin=./libMemorySSADemo.so -passes=memssa-demo -S ~/compiler-class-llvm-tutor-private/test/demo2.ll -o ~/compiler-class-llvm-tutor-private/test/demo2_opt.ll
 
+/usr/lib/llvm-21/bin/opt -load-pass-plugin=./libMemorySSADemo.so -passes=memssa-demo -S ~/compiler-class-llvm-tutor-private/test/array_loop1.ll -o ~/compiler-class-llvm-tutor-private/test/array_loop1_opt.ll
 ```
-/usr/lib/llvm-21/bin/opt   -load-pass-plugin=./libMemorySSADemo.so   -passes=memssa-demo   -S ~/llvm-tutor/test/array_loop1.ll   -o ~/llvm-tutor/test/array_loop1_opt.ll 
-```
-
 
 ##### Go to build-DSE 
 Do:
 ...
+
+```rm -rf *```
 ```
 cmake ../DSE
 ```
@@ -508,7 +503,7 @@ make
 ##### Compile the DSE:
 ...
 ```
-/usr/lib/llvm-21/bin/opt   -load-pass-plugin=./libDeadStoreElimination.so   -passes=dead-store   -S ~/llvm-tutor/test/dse_test1.ll   -o ~/llvm-tutor/test/dse_test1_opt.ll 
+/usr/lib/llvm-21/bin/opt -load-pass-plugin=./libDeadStoreElimination.so -passes=dead-store -S ~/compiler-class-llvm-tutor-private/test/dse_test1.ll -o ~/compiler-class-llvm-tutor-private/test/dse_test1_opt.ll
 ```
 
 Input:
