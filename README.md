@@ -453,6 +453,11 @@ exit:                                             ; preds = %outer_loop_inc
 ## Setup
 
 ##### Go to build-MSD
+
+```
+cd build-MSD
+```
+
 Do:
 ..
 
@@ -483,11 +488,37 @@ clang -O0 -Xclang -disable-O0-optnone -S -emit-llvm ~/compiler-class-llvm-tutor-
 
 ```
 /usr/lib/llvm-21/bin/opt -load-pass-plugin=./libMemorySSADemo.so -passes=memssa-demo -S ~/compiler-class-llvm-tutor-private/test/demo.ll -o ~/compiler-class-llvm-tutor-private/test/demo_opt.ll
+```
 
+```
+dot -Tpng ~/compiler-class-llvm-tutor-private/build-MSD/demo_MemorySSA.dot \
+    -o ~/compiler-class-llvm-tutor-private/build-MSD/demo_MemorySSA.png
+```
+
+You can open the image now
+
+
+```
 /usr/lib/llvm-21/bin/opt -load-pass-plugin=./libMemorySSADemo.so -passes=memssa-demo -S ~/compiler-class-llvm-tutor-private/test/demo2.ll -o ~/compiler-class-llvm-tutor-private/test/demo2_opt.ll
+```
 
+```
+dot -Tpng ~/compiler-class-llvm-tutor-private/build-MSD/demo_MemorySSA.dot \
+    -o ~/compiler-class-llvm-tutor-private/build-MSD/demo_MemorySSA.png
+```
+
+You can open the image now
+
+```
 /usr/lib/llvm-21/bin/opt -load-pass-plugin=./libMemorySSADemo.so -passes=memssa-demo -S ~/compiler-class-llvm-tutor-private/test/array_loop1.ll -o ~/compiler-class-llvm-tutor-private/test/array_loop1_opt.ll
 ```
+
+```
+dot -Tpng ~/compiler-class-llvm-tutor-private/build-MSD/demo_MemorySSA.dot \
+    -o ~/compiler-class-llvm-tutor-private/build-MSD/demo_MemorySSA.png
+```
+
+You can open the image now
 
 ##### Go to build-DSE 
 Do:
