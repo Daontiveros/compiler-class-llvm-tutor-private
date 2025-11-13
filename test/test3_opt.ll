@@ -1,4 +1,4 @@
-; ModuleID = '/home/diana/llvm-tutor/test/test3.ll'
+; ModuleID = '/home/daontiveros/compiler-class-llvm-tutor-private/test/test3.ll'
 source_filename = "test_loop_elim.c"
 
 define i32 @sum_n(i32 %n) {

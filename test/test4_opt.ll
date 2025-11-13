@@ -1,4 +1,4 @@
-; ModuleID = '/home/diana/llvm-tutor/test/test4.ll'
+; ModuleID = '/home/daontiveros/compiler-class-llvm-tutor-private/test/test4.ll'
 source_filename = "nested_loop.c"
 
 define i32 @sum_nested(i32 %n, i32 %m) {

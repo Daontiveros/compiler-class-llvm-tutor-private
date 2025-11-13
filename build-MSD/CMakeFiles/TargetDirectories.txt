@@ -1,0 +1,8 @@
+/home/daontiveros/compiler-class-llvm-tutor-private/build-MSD/CMakeFiles/intrinsics_gen.dir
+/home/daontiveros/compiler-class-llvm-tutor-private/build-MSD/CMakeFiles/vt_gen.dir
+/home/daontiveros/compiler-class-llvm-tutor-private/build-MSD/CMakeFiles/omp_gen.dir
+/home/daontiveros/compiler-class-llvm-tutor-private/build-MSD/CMakeFiles/acc_gen.dir
+/home/daontiveros/compiler-class-llvm-tutor-private/build-MSD/CMakeFiles/target_parser_gen.dir
+/home/daontiveros/compiler-class-llvm-tutor-private/build-MSD/CMakeFiles/MemorySSADemo.dir
+/home/daontiveros/compiler-class-llvm-tutor-private/build-MSD/CMakeFiles/edit_cache.dir
+/home/daontiveros/compiler-class-llvm-tutor-private/build-MSD/CMakeFiles/rebuild_cache.dir
